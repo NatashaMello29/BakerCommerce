@@ -39,18 +39,20 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(202, 146);
+            this.lblEmail.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(191, 142);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblEmail.Size = new System.Drawing.Size(51, 17);
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "Email:";
             // 
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Location = new System.Drawing.Point(196, 193);
+            this.lblSenha.Font = new System.Drawing.Font("Britannic Bold", 12F);
+            this.lblSenha.Location = new System.Drawing.Point(186, 189);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(41, 13);
+            this.lblSenha.Size = new System.Drawing.Size(56, 17);
             this.lblSenha.TabIndex = 1;
             this.lblSenha.Text = "Senha:";
             // 
@@ -65,6 +67,7 @@
             // 
             this.txbSenha.Location = new System.Drawing.Point(256, 186);
             this.txbSenha.Name = "txbSenha";
+            this.txbSenha.PasswordChar = '•';
             this.txbSenha.Size = new System.Drawing.Size(172, 20);
             this.txbSenha.TabIndex = 3;
             // 
@@ -77,6 +80,7 @@
             this.btnEntrar.TabIndex = 4;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // lblNome
             // 
