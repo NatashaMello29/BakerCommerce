@@ -51,7 +51,7 @@
             // 
             this.lblDescricao.AutoSize = true;
             this.lblDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricao.Location = new System.Drawing.Point(47, 93);
+            this.lblDescricao.Location = new System.Drawing.Point(48, 77);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(548, 25);
             this.lblDescricao.TabIndex = 1;
@@ -63,7 +63,7 @@
             this.btnComandas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnComandas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComandas.Font = new System.Drawing.Font("Swis721 BlkCn BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComandas.Location = new System.Drawing.Point(137, 138);
+            this.btnComandas.Location = new System.Drawing.Point(137, 154);
             this.btnComandas.Name = "btnComandas";
             this.btnComandas.Size = new System.Drawing.Size(166, 111);
             this.btnComandas.TabIndex = 2;
@@ -76,7 +76,7 @@
             this.btnProdutos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProdutos.Font = new System.Drawing.Font("Swis721 BlkCn BT", 12F);
-            this.btnProdutos.Location = new System.Drawing.Point(309, 138);
+            this.btnProdutos.Location = new System.Drawing.Point(309, 154);
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.Size = new System.Drawing.Size(180, 111);
             this.btnProdutos.TabIndex = 3;
@@ -89,7 +89,7 @@
             this.btnCaixa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCaixa.Font = new System.Drawing.Font("Swis721 BlkCn BT", 12F);
-            this.btnCaixa.Location = new System.Drawing.Point(137, 255);
+            this.btnCaixa.Location = new System.Drawing.Point(137, 271);
             this.btnCaixa.Name = "btnCaixa";
             this.btnCaixa.Size = new System.Drawing.Size(352, 45);
             this.btnCaixa.TabIndex = 4;
@@ -102,12 +102,13 @@
             this.btnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuario.Font = new System.Drawing.Font("Swis721 BlkCn BT", 12F);
-            this.btnUsuario.Location = new System.Drawing.Point(137, 306);
+            this.btnUsuario.Location = new System.Drawing.Point(137, 322);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(352, 51);
             this.btnUsuario.TabIndex = 5;
             this.btnUsuario.Text = "Usuários";
             this.btnUsuario.UseVisualStyleBackColor = false;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
             // MenuPrincipal
             // 
