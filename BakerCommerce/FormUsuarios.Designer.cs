@@ -31,24 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.grbCadastro = new System.Windows.Forms.GroupBox();
-            this.lblNomeCadastro = new System.Windows.Forms.Label();
-            this.lblEmailCadastro = new System.Windows.Forms.Label();
-            this.lblSenhaCadastro = new System.Windows.Forms.Label();
-            this.txbNomeCadastro = new System.Windows.Forms.TextBox();
-            this.txbEmailCadastro = new System.Windows.Forms.TextBox();
-            this.txbSenhaCadastro = new System.Windows.Forms.TextBox();
             this.BtnCadastrar = new System.Windows.Forms.Button();
+            this.txbSenhaCadastro = new System.Windows.Forms.TextBox();
+            this.txbEmailCadastro = new System.Windows.Forms.TextBox();
+            this.txbNomeCadastro = new System.Windows.Forms.TextBox();
+            this.lblSenhaCadastro = new System.Windows.Forms.Label();
+            this.lblEmailCadastro = new System.Windows.Forms.Label();
+            this.lblNomeCadastro = new System.Windows.Forms.Label();
             this.grbEditar = new System.Windows.Forms.GroupBox();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbSenhaEditar = new System.Windows.Forms.TextBox();
+            this.txbEmailEditar = new System.Windows.Forms.TextBox();
+            this.txbNomeEditar = new System.Windows.Forms.TextBox();
             this.lblSenhaEditar = new System.Windows.Forms.Label();
             this.lblEmailEditar = new System.Windows.Forms.Label();
             this.lblNomeEditar = new System.Windows.Forms.Label();
             this.grbApagar = new System.Windows.Forms.GroupBox();
-            this.lblApagar = new System.Windows.Forms.Label();
             this.btnApagar = new System.Windows.Forms.Button();
+            this.lblApagar = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -71,6 +71,7 @@
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.Size = new System.Drawing.Size(622, 226);
             this.dgvUsuarios.TabIndex = 0;
+            this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             // 
             // grbCadastro
             // 
@@ -88,54 +89,6 @@
             this.grbCadastro.TabStop = false;
             this.grbCadastro.Text = "Cadastro";
             // 
-            // lblNomeCadastro
-            // 
-            this.lblNomeCadastro.AutoSize = true;
-            this.lblNomeCadastro.Location = new System.Drawing.Point(7, 39);
-            this.lblNomeCadastro.Name = "lblNomeCadastro";
-            this.lblNomeCadastro.Size = new System.Drawing.Size(85, 13);
-            this.lblNomeCadastro.TabIndex = 0;
-            this.lblNomeCadastro.Text = "Nome Completo:";
-            // 
-            // lblEmailCadastro
-            // 
-            this.lblEmailCadastro.AutoSize = true;
-            this.lblEmailCadastro.Location = new System.Drawing.Point(10, 76);
-            this.lblEmailCadastro.Name = "lblEmailCadastro";
-            this.lblEmailCadastro.Size = new System.Drawing.Size(35, 13);
-            this.lblEmailCadastro.TabIndex = 1;
-            this.lblEmailCadastro.Text = "Email:";
-            // 
-            // lblSenhaCadastro
-            // 
-            this.lblSenhaCadastro.AutoSize = true;
-            this.lblSenhaCadastro.Location = new System.Drawing.Point(7, 114);
-            this.lblSenhaCadastro.Name = "lblSenhaCadastro";
-            this.lblSenhaCadastro.Size = new System.Drawing.Size(41, 13);
-            this.lblSenhaCadastro.TabIndex = 2;
-            this.lblSenhaCadastro.Text = "Senha:";
-            // 
-            // txbNomeCadastro
-            // 
-            this.txbNomeCadastro.Location = new System.Drawing.Point(109, 39);
-            this.txbNomeCadastro.Name = "txbNomeCadastro";
-            this.txbNomeCadastro.Size = new System.Drawing.Size(135, 20);
-            this.txbNomeCadastro.TabIndex = 3;
-            // 
-            // txbEmailCadastro
-            // 
-            this.txbEmailCadastro.Location = new System.Drawing.Point(109, 76);
-            this.txbEmailCadastro.Name = "txbEmailCadastro";
-            this.txbEmailCadastro.Size = new System.Drawing.Size(135, 20);
-            this.txbEmailCadastro.TabIndex = 4;
-            // 
-            // txbSenhaCadastro
-            // 
-            this.txbSenhaCadastro.Location = new System.Drawing.Point(109, 107);
-            this.txbSenhaCadastro.Name = "txbSenhaCadastro";
-            this.txbSenhaCadastro.Size = new System.Drawing.Size(135, 20);
-            this.txbSenhaCadastro.TabIndex = 5;
-            // 
             // BtnCadastrar
             // 
             this.BtnCadastrar.Location = new System.Drawing.Point(30, 152);
@@ -146,12 +99,60 @@
             this.BtnCadastrar.UseVisualStyleBackColor = true;
             this.BtnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
+            // txbSenhaCadastro
+            // 
+            this.txbSenhaCadastro.Location = new System.Drawing.Point(109, 107);
+            this.txbSenhaCadastro.Name = "txbSenhaCadastro";
+            this.txbSenhaCadastro.Size = new System.Drawing.Size(135, 20);
+            this.txbSenhaCadastro.TabIndex = 5;
+            // 
+            // txbEmailCadastro
+            // 
+            this.txbEmailCadastro.Location = new System.Drawing.Point(109, 76);
+            this.txbEmailCadastro.Name = "txbEmailCadastro";
+            this.txbEmailCadastro.Size = new System.Drawing.Size(135, 20);
+            this.txbEmailCadastro.TabIndex = 4;
+            // 
+            // txbNomeCadastro
+            // 
+            this.txbNomeCadastro.Location = new System.Drawing.Point(109, 39);
+            this.txbNomeCadastro.Name = "txbNomeCadastro";
+            this.txbNomeCadastro.Size = new System.Drawing.Size(135, 20);
+            this.txbNomeCadastro.TabIndex = 3;
+            // 
+            // lblSenhaCadastro
+            // 
+            this.lblSenhaCadastro.AutoSize = true;
+            this.lblSenhaCadastro.Location = new System.Drawing.Point(7, 114);
+            this.lblSenhaCadastro.Name = "lblSenhaCadastro";
+            this.lblSenhaCadastro.Size = new System.Drawing.Size(41, 13);
+            this.lblSenhaCadastro.TabIndex = 2;
+            this.lblSenhaCadastro.Text = "Senha:";
+            // 
+            // lblEmailCadastro
+            // 
+            this.lblEmailCadastro.AutoSize = true;
+            this.lblEmailCadastro.Location = new System.Drawing.Point(10, 76);
+            this.lblEmailCadastro.Name = "lblEmailCadastro";
+            this.lblEmailCadastro.Size = new System.Drawing.Size(35, 13);
+            this.lblEmailCadastro.TabIndex = 1;
+            this.lblEmailCadastro.Text = "Email:";
+            // 
+            // lblNomeCadastro
+            // 
+            this.lblNomeCadastro.AutoSize = true;
+            this.lblNomeCadastro.Location = new System.Drawing.Point(7, 39);
+            this.lblNomeCadastro.Name = "lblNomeCadastro";
+            this.lblNomeCadastro.Size = new System.Drawing.Size(85, 13);
+            this.lblNomeCadastro.TabIndex = 0;
+            this.lblNomeCadastro.Text = "Nome Completo:";
+            // 
             // grbEditar
             // 
             this.grbEditar.Controls.Add(this.btnEditar);
-            this.grbEditar.Controls.Add(this.textBox1);
-            this.grbEditar.Controls.Add(this.textBox2);
-            this.grbEditar.Controls.Add(this.textBox3);
+            this.grbEditar.Controls.Add(this.txbSenhaEditar);
+            this.grbEditar.Controls.Add(this.txbEmailEditar);
+            this.grbEditar.Controls.Add(this.txbNomeEditar);
             this.grbEditar.Controls.Add(this.lblSenhaEditar);
             this.grbEditar.Controls.Add(this.lblEmailEditar);
             this.grbEditar.Controls.Add(this.lblNomeEditar);
@@ -171,27 +172,28 @@
             this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // textBox1
+            // txbSenhaEditar
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
-            this.textBox1.TabIndex = 5;
+            this.txbSenhaEditar.Location = new System.Drawing.Point(109, 107);
+            this.txbSenhaEditar.Name = "txbSenhaEditar";
+            this.txbSenhaEditar.Size = new System.Drawing.Size(135, 20);
+            this.txbSenhaEditar.TabIndex = 5;
             // 
-            // textBox2
+            // txbEmailEditar
             // 
-            this.textBox2.Location = new System.Drawing.Point(109, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 20);
-            this.textBox2.TabIndex = 4;
+            this.txbEmailEditar.Location = new System.Drawing.Point(109, 76);
+            this.txbEmailEditar.Name = "txbEmailEditar";
+            this.txbEmailEditar.Size = new System.Drawing.Size(135, 20);
+            this.txbEmailEditar.TabIndex = 4;
             // 
-            // textBox3
+            // txbNomeEditar
             // 
-            this.textBox3.Location = new System.Drawing.Point(109, 39);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(135, 20);
-            this.textBox3.TabIndex = 3;
+            this.txbNomeEditar.Location = new System.Drawing.Point(109, 39);
+            this.txbNomeEditar.Name = "txbNomeEditar";
+            this.txbNomeEditar.Size = new System.Drawing.Size(135, 20);
+            this.txbNomeEditar.TabIndex = 3;
             // 
             // lblSenhaEditar
             // 
@@ -232,16 +234,6 @@
             this.grbApagar.TabStop = false;
             this.grbApagar.Text = "Apagar";
             // 
-            // lblApagar
-            // 
-            this.lblApagar.AutoSize = true;
-            this.lblApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApagar.Location = new System.Drawing.Point(44, 50);
-            this.lblApagar.Name = "lblApagar";
-            this.lblApagar.Size = new System.Drawing.Size(242, 20);
-            this.lblApagar.TabIndex = 0;
-            this.lblApagar.Text = "Selecione o usuário para apagar.";
-            // 
             // btnApagar
             // 
             this.btnApagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -253,6 +245,17 @@
             this.btnApagar.TabIndex = 1;
             this.btnApagar.Text = "APAGAR";
             this.btnApagar.UseVisualStyleBackColor = false;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
+            // 
+            // lblApagar
+            // 
+            this.lblApagar.AutoSize = true;
+            this.lblApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApagar.Location = new System.Drawing.Point(44, 50);
+            this.lblApagar.Name = "lblApagar";
+            this.lblApagar.Size = new System.Drawing.Size(242, 20);
+            this.lblApagar.TabIndex = 0;
+            this.lblApagar.Text = "Selecione o usuário para apagar.";
             // 
             // lblTitulo
             // 
@@ -315,9 +318,9 @@
         private System.Windows.Forms.Button BtnCadastrar;
         private System.Windows.Forms.GroupBox grbEditar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txbSenhaEditar;
+        private System.Windows.Forms.TextBox txbEmailEditar;
+        private System.Windows.Forms.TextBox txbNomeEditar;
         private System.Windows.Forms.Label lblSenhaEditar;
         private System.Windows.Forms.Label lblEmailEditar;
         private System.Windows.Forms.Label lblNomeEditar;
